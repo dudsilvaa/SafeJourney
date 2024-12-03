@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ececec;
+    padding: 6px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgb(182, 182, 182);
+}
+
+form {
+    position: relative;
+    margin-top: 80px;
+    transition: .5s;
+    width: 300px;
+    height: 400px;
+}
+
+.buttonsForm {
+    margin-top: 15px;
+    margin-bottom: -35px;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0 0 7px 0 #31a1e0;
+}
+
+.buttonsForm button {
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: relative;
+    padding: 10px 22px;
+}
+
+.btnColor {
+    position: absolute;
+    width: 108px;
+    height: 100%;
+    background: #31a1e0;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    border: none;
+    margin-top: 20px;
+    border-radius: 14px;
+    padding: 8px 0 10px 15px;
+    outline: none;
+    width: 100%;
+}
+
+input::placeholder {
+    justify-content: center;
+    align-items: center;
+}
+
+button[type="submit"] {
+    background: #31a1e0;
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0 12px 5px;
+    font-size: 16px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #f9f9f9;
+    border: 1px solid #31a1e0;
+    color: #31a1e0;
+}
+
+.container .signup {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.container a {
+    text-decoration: none;
+    color: black;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+#login {
+    top: -40px;
+    left: 0px;
+}
+
+#login svg {
+    cursor: pointer;
+    position: absolute;
+    width: 7%;
+    left: 270px;
+    top: 138px;
+}
+
+#cadastrar {
+    left: 340px;
+    top: -385px;
+}
+
+#cadastrar .eye1 {
+    cursor: pointer;
+    position: absolute;
+    width: 7%;
+    left: 270px;
+    top: 138px;
+}
+
+#cadastrar .eye2 {
+    cursor: pointer;
+    position: absolute;
+    width: 7%;
+    left: 270px;
+    top: 192px;
+}
+
+.popup_success {
+    display: none;
+    position: fixed;
+    width: 27%;
+    top: 7%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.popup_success.show {
+    display: flex;
+    animation: fadeIn 3s forwards;
+    animation: fadeOut 3s forwards; 
+}
+
+.popup_success svg {
+    margin-right: 22px;
+    width: 15%;
+}
+
+.popup_erro {
+    display: none;
+    position: fixed;
+    width: 27%;
+    top: 7%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    background-color: #af4c4c;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.popup_erro.show {
+    display: flex;
+    animation: fadeIn 3s forwards;
+    animation: fadeOut 3s forwards; 
+}
+
+.popup_erro svg {
+    margin-right: 22px;
+    width: 15%;
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
