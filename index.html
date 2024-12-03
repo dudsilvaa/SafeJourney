@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safe Journey - Home</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- IMPORTANDO FONTE -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- MENU DE NAVEGAÇÃO -->
+    <header>
+      <a href="./index.html"><img class="logo" src="./img/logo2.png" alt="Logo Safe Journey" style="width: 60%; height: 80%; margin-top: 5px; margin-bottom: 5px; margin-right: -10px;" /></a> 
+      <div class="navbar">
+        <a data-i18n="map" href="./mapa1.html">Mapa</a>
+        <div class="dropdown">
+          <button data-i18n="suporte" class="dropbtn">Suporte</button><img class="down" src="./img/seta3.png">
+          <div class="dropdown-content">
+            <a data-i18n="title1" href="./instrucoes.html">Instruções</a>
+            <a data-i18n="title2" href="./perguntas.html">Perguntas Frequentes</a>
+            <a data-i18n="ajuda" href="./ajuda.html">Ajuda</a>
+          </div>
+        </div>
+        <a data-i18n="moradia" href="./moradia.html">Moradia</a>
+      </div>
+      <div class="lang">
+        <button class="lang"><img src="./img/language.png" style="width: 100%"/></button>
+        <div class="dropdown-content">
+          <a href="#" onclick="mudarIdioma('en')">English</a>
+          <a href="#" onclick="mudarIdioma('pt')">Portuguese</a>
+        </div>
+      </div>
+      <div class="user_pfp">
+        <button class="user_pfp"><img src="./img/user.png"></button>
+        <div class="dropdown-content">
+          <a data-i18n="perfil" href="./perfil.html">Ver perfil</a>
+          <a data-i18n="logout" href="#" onclick="logout()">Sair</a>
+        </div>
+      </div>
+      </div>
+      </div>
+    </header>
+
+    <!-- BANNER -->
+    <div class="banner">
+      <img src="./img/Banner_2.png" alt="Banner" />
+    </div>
+    <br />
+
+    <!-- SOBRE NÓS -->
+    <h1 class="t_projeto" data-i18n="what_is"></h1>
+    <br />
+    <br />
+    <div class="projeto">
+      <p data-i18n="description1"></p>
+      <img
+        class=""
+        src="./img/imagem.jpg"
+        alt="Mockup do site/app"
+        style="width: 45%; margin-right: 65px"
+      />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 class="t_objetivos" data-i18n="how_work"></h1>
+    <br />
+    <br />
+    <div class="objetivos">
+      <img
+        class="refugees"
+        src="./img/refugees.jpg"
+        alt="Refugiados"
+        style="width: 45%; margin-left: 65px"
+      />
+      <p data-i18n="description2"></p>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 class="t_aboutus" data-i18n="about_us">Sobre nós</h1>
+    <br />
+    <br />
+    <div class="aboutus">
+      <p data-i18n="description3"></p>
+      <img
+        class="logo"
+        src="./img/Logo_Squad.png"
+        alt="Logo SYNC"
+        style="width: 45%; margin-right: 65px"
+      />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- CHATBOT -->
+    <div class="chatbot">
+      
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-col">
+        <a href="./index.html"><img class="logo" src="./img/safeJourney_logo.png" alt="Logo Safe Journey" style="width: auto; height: 28%; margin-top: 5px; margin-bottom: 5px;" /></a> 
+        <div class="nav">
+          <h1 data-i18n="nav" class="title">Navegação</h1>
+          <a data-i18n="home" href="./index.html">Início</a>
+          <a data-i18n="map" href="./mapa1.html">Mapa</a>
+          <a data-i18n="title1" href="./instrucoes.html">Instruções</a>
+          <a data-i18n="title2" href="./perguntas.html">Perguntas Frequentes</a>
+          <a data-i18n="ajuda" href="./ajuda.html">Ajuda</a>
+        </div>
+        <div class="download">
+          <h1 class="title">Download</h1>
+          <a href="#">Mobile App</a>
+        </div>
+        <div class="recursos">
+          <h1 data-i18n="recursos" class="title">Recursos</h1>
+          <a data-i18n="docm" href="#">Documentação</a>
+        </div>
+        <div class="fale_conosco">
+          <h1 data-i18n="us" class="title">Fale Conosco</h1>
+          <p>safejourney@gmail.com</p>
+          <p>+55 (19) 9999-999</p>
+        </div>
+        <div class="redes_sociais">
+          <h1 data-i18n="redes" class="title">Redes Sociais</h1>
+          <div class="redes_sociais_icons">
+            <br />
+            <a href="https://x.com"
+              ><i class="fa fa-twitter" style="font-size: 23px"></i
+            ></a>
+            <a href="https://www.facebook.com"
+              ><i class="fa fa-facebook" style="font-size: 23px"></i
+            ></a>
+            <a href="https://www.instagram.com"
+              ><i class="fa fa-instagram" style="font-size: 23px"></i
+            ></a>
+            <a href="https://br.linkedin.com"
+              ><i class="fa fa-linkedin" style="font-size: 23px"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+<!-- FIREBASE - BANCO DE DADOS -->
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+<script src="./js/firebase-int.js"></script>
+
+<script src="./js/logout.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/03/19/20241003194822-4APW5AQH.js"></script>
+
+<script src="./js/translation.js"></script>
+<script src="./js/lang.js"></script>
+</html> 

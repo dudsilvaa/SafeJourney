@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safe Journey - Home</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/add_moradia.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- IMPORTANDO FONTE -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- MENU DE NAVEGAÇÃO -->
+    <header>
+      <a href="./index.html"><img class="logo" src="./img/logo2.png" alt="Logo Safe Journey" style="width: 60%; height: 80%; margin-top: 5px; margin-bottom: 5px; margin-right: -10px;" /></a> 
+      <div class="navbar">
+        <a data-i18n="map" href="./mapa1.html">Mapa</a>
+        <div class="dropdown">
+          <button data-i18n="suporte" class="dropbtn">Suporte</button><img class="down" src="./img/seta3.png">
+          <div class="dropdown-content">
+            <a data-i18n="title1" href="./instrucoes.html">Instruções</a>
+            <a data-i18n="title2" href="./perguntas.html">Perguntas Frequentes</a>
+            <a data-i18n="ajuda" href="./ajuda.html">Ajuda</a>
+          </div>
+        </div>
+        <a data-i18n="moradia" href="./moradia.html">Moradia</a>
+      </div>
+      <div class="lang">
+        <button class="lang"><img src="./img/language.png" style="width: 100%"/></button>
+        <div class="dropdown-content">
+          <a href="#" onclick="mudarIdioma('en')">English</a>
+          <a href="#" onclick="mudarIdioma('pt')">Portuguese</a>
+        </div>
+      </div>
+      <div class="user_pfp">
+        <button class="user_pfp"><img src="./img/user.png"></button>
+        <div class="dropdown-content">
+          <a data-i18n="perfil" href="./perfil.html">Ver perfil</a>
+          <a data-i18n="logout" href="#" onclick="logout()">Sair</a>
+        </div>
+      </div>
+      </div>
+      </div>
+    </header>
+
+    <!-- FORMULÁRIO PARA OFERECER UMA MORADIA -->
+    <h1 data-i18n="form" class="t_forms">Formulário de Hospedagem para Refugiados</h1>
+    <br>
+    <br>
+    <form class="forms">
+        <label for="nome" data-i18n="name">Nome completo:</label>
+        <input type="text" id="nomeCampo" name="nome" required>
+        <br>
+        <br>
+        
+        <label for="email" data-i18n="email">E-mail:</label>
+        <input type="email" id="emailCampo" name="email" required>
+        <br>
+        <br>
+
+        <label for="telefone" data-i18n="num">Número de telefone:</label>
+        <input type="tel" id="telefoneCampo" name="telefone" required>
+        <br>
+        <br>
+
+        <label for="local" data-i18n="local">Localização da casa oferecida:</label>
+        <label for="rua" data-i18n="rua">Rua:</label>
+        <input type="text" id="ruaCampo" name="rua" required>
+        <label for="rua" data-i18n="cidade">Cidade:</label>
+        <input type="text" id="cidadeCampo" name="cidade" required>
+        <br>
+        <br>
+
+        <label for="desc" data-i18n="desc">Descrição:</label>
+        <textarea id="descCampo" name="desc" rows="4" cols="50"></textarea>
+        <br>
+        <br>
+
+        <label for="img" data-i18n="img">Imagem da casa:</label>
+        <div class="drag-area">
+          <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <span data-i18n="drag">Arraste e solte para enviar a imagem</span>
+          <span data-i18n="or">OU</span>
+          <button data-i18n="search" class="search">Procure o arquivo</button>
+          <input type="file" class="file" hidden>
+        </div>
+        <br>
+
+        <button class="add" data-i18n="btn_enviar" type="submit" onclick="addMoradia(event)">Enviar</button>
+    </form>
+
+    <!-- CHATBOT -->
+    <div class="chatbot"></div>
+
+    <br>
+    <br>
+    <br>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-col">
+        <a href="./index.html"><img class="logo" src="./img/safeJourney_logo.png" alt="Logo Safe Journey" style="width: auto; height: 28%; margin-top: 5px; margin-bottom: 5px;" /></a> 
+        <div class="nav">
+          <h1 data-i18n="nav" class="title">Navegação</h1>
+          <a data-i18n="home" href="./index.html">Início</a>
+          <a data-i18n="map" href="./mapa1.html">Mapa</a>
+          <a data-i18n="title1" href="./instrucoes.html">Instruções</a>
+          <a data-i18n="title2" href="./perguntas.html">Perguntas Frequentes</a>
+          <a data-i18n="ajuda" href="./ajuda.html">Ajuda</a>
+        </div>
+        <div class="download">
+          <h1 class="title">Download</h1>
+          <a href="#">Mobile App</a>
+        </div>
+        <div class="recursos">
+          <h1 data-i18n="recursos" class="title">Recursos</h1>
+          <a data-i18n="docm" href="#">Documentação</a>
+        </div>
+        <div class="fale_conosco">
+          <h1 data-i18n="us" class="title">Fale Conosco</h1>
+          <p>safejourney@gmail.com</p>
+          <p>+55 (19) 9999-999</p>
+        </div>
+        <div class="redes_sociais">
+          <h1 data-i18n="redes" class="title">Redes Sociais</h1>
+          <div class="redes_sociais_icons">
+            <br />
+            <a href="https://x.com"
+              ><i class="fa fa-twitter" style="font-size: 23px"></i
+            ></a>
+            <a href="https://www.facebook.com"
+              ><i class="fa fa-facebook" style="font-size: 23px"></i
+            ></a>
+            <a href="https://www.instagram.com"
+              ><i class="fa fa-instagram" style="font-size: 23px"></i
+            ></a>
+            <a href="https://br.linkedin.com"
+              ><i class="fa fa-linkedin" style="font-size: 23px"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+    <!-- Firebase App (SDK Principal) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <!-- Inicializando o Firebase -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD606Md5bFxTOOCi4Q3gZnhcyaN7XMOKxA",
+            authDomain: "sync-safe-journey.firebaseapp.com",
+            projectId: "sync-safe-journey",
+            storageBucket: "sync-safe-journey.appspot.com",
+            messagingSenderId: "740341726296",
+            appId: "1:740341726296:web:a122ce85abb97cf9e11e2d"
+        };
+
+        // Inicializando o Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Inicializando o banco de dados
+        const database = firebase.database();
+        const auth = firebase.auth();
+    </script>
+
+<script src="./js/logout.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/03/19/20241003194822-4APW5AQH.js"></script>
+
+<script src="./js/translation.js"></script>
+<script src="./js/lang.js"></script>
+
+<script src="./js/teste_add_moradia.js"></script>
+</html> 
