@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Journey - Instruções</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/instrucoes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- IMPORTANDO FONTE -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    </style>
+</head>
+<body>
+
+<!-- MENU DE NAVEGAÇÃO -->
+<header>
+  <a href="./index.html"><img class="logo" src="./img/logo2.png" alt="Logo Safe Journey" style="width: 60%; height: 80%; margin-top: 5px; margin-bottom: 5px; margin-right: -10px;" /></a> 
+  <div class="navbar">
+    <a data-i18n="map" href="./mapa1.html">Mapa</a>
+    <div class="dropdown">
+      <button data-i18n="suporte" class="dropbtn">Suporte</button><img class="seta" src="./img/seta3.png">
+      <div class="dropdown-content">
+        <a data-i18n="title1" href="./instrucoes.html">Instruções</a>
+        <a data-i18n="title2" href="./perguntas.html">Perguntas Frequentes</a>
+        <a data-i18n="ajuda" href="./ajuda.html">Ajuda</a>
+      </div>
+    </div>
+    <a data-i18n="moradia" href="./moradia.html">Moradia</a>
+  </div>
+  <div class="lang">
+    <button class="lang"><img src="./img/language.png" style="width: 100%"/></button>
+    <div class="dropdown-content">
+      <a href="#" onclick="mudarIdioma('en')">English</a>
+      <a href="#" onclick="mudarIdioma('pt')">Portuguese</a>
+    </div>
+  </div>
+  <div class="user_pfp">
+    <button class="user_pfp"><img src="./img/user.png"></button>
+    <div class="dropdown-content">
+      <a data-i18n="perfil" href="./perfil.html">Ver perfil</a>
+      <a data-i18n="logout" href="#" onclick="logout()">Sair</a>
+    </div>
+  </div>
+  </div>
+  </div>
+</header>
+
+<br>
+<br>
+<h1 class="t_instrucoes" data-i18n="title1"></h1>
+<br>
+<br>
+
+<!-- INSTRUÇÕES -->
+<div class="instrucoes">
+  <!-- Documentação e Legalização -->
+  <div class="doc">
+    <div class="accordion">
+      <button data-i18n="doc" class="btn_acc">Documentação e Legalização</button><img class="down" src="./img/seta.png">
+    </div>
+    <div class="content">
+      <div class="box">
+        <p data-i18n="doc_desc1">Para solicitar refúgio no Brasil é preciso estar em solo brasileiro, assim que a pessoa chegar é necessário que ela vá para uma delegacia da Polícia Federal ou uma unidade de imigração na fronteira.</p> 
+        <p data-i18n="doc_desc2">A solicitação é gratuita e pode ser feita pela pessoa imigrante, não é obrigatório ter um advogado.</p>
+        <button data-i18n="doc_sub1" class="subaccordion">Primeiro passo<span class="down2"></span></button>
+        <div class="container">
+          <p data-i18n="doc_sub1_desc1">- Fazer um cadastro no Sisconare, um sistema na qual se solicita o reconhecimento da condição de refugiado no Brasil; </p>
+          <p data-i18n="doc_sub1_desc2">- Entrar no sistema, clicar em “Solicitações” e clicar na opção “Solicitação de refúgio";</p>
+          <p data-i18n="doc_sub1_desc3">- Responder o formulário disponível;</p>
+          <p data-i18n="doc_sub1_desc4">- Imprimir a página ou anotar o código de controle;</p> 
+          <p data-i18n="doc_sub1_desc5">- Agendar atendimento na Polícia Federal para emitir seu documento de identificação o protocolo de refúgio. </p>
+        </div>
+        <button data-i18n="doc_sub2" class="subaccordion">Segundo passo<span class="down"></span></button>
+        <div class="container">
+          <p data-i18n="doc_sub2_desc1">- Após o preenchimento do formulário é preciso levar o número de controle que aparece na tela para uma unidade da Polícia Federal, pois lá eles coletarão as digitais para fazer o registro do solicitante. Ao final, é entregue o Protocolo de Refúgio;</p>
+          <p data-i18n="doc_sub2_desc2">- Esse protocolo precisa ser renovado anualmente na Polícia Federal, até o processo de refúgio ser decidido pelo Conare. Se ele não for renovado após 6 meses da data de validade, o processo de refúgio é extinto sem análise do Conare e o solicitante fica irregular no Brasil.</p> 
+          <p data-i18n="doc_sub2_desc3">Consulte no link abaixo o endereço das unidades da Polícia Federal e verifique se é preciso agendar atendimento.</p>
+          <p><a target="_blank" href="https://www.gov.br/pf/pt-br/acesso-a-informacao/institucional/quem-e-quem/superintendencias-e-delegacias">https://www.gov.br/pf/pt-br/acesso-a-informacao/institucional/quem-e-quem/superintendencias-e-delegacias.</a></p>
+        </div>
+        <button data-i18n="doc_sub3" class="subaccordion">Terceiro passo<span class="down"></span></button>
+        <div class="container">
+          <p><strong data-i18n="doc_sub3_title1">Entrevista de elegibilidade:</strong></p>
+          <p data-i18n="doc_sub3_desc1">A entrevista de elegibilidade tem como função fazer o reconhecimento das condições da pessoa que solicita refúgio. Essa pessoa conversará com um representante da Coordenação-Geral do Conare para explicar com o máximo de detalhes possível o motivo de ter saído do país de origem e ter pedido refúgio no Brasil.</p> 
+          <p data-i18n="doc_sub3_desc2">Se tiver documentos, fotos, matérias de revistas que comprovem a situação pessoal que vivenciou no país de origem, leve à entrevista ou envie essas informações para a Coordenação-Geral do Conare <a target="_blank" href="https://www.gov.br/mj/pt-br/assuntos/seus-direitos/refugio/servicos/enviar-documentos-e-informacoes">neste link</a>.</p>
+          <p data-i18n="doc_sub3_desc3">As informações apresentadas não serão reveladas, estão protegidas por lei e somente representantes do governo brasileiro terão acesso a eles. </p>
+          <p data-i18n="doc_sub3_desc4">Logo após, o Comitê Nacional para os Refugiados (Conare) poderá analisar melhor o seu pedido e tomar uma decisão.  </p>
+          <br>
+          <p><strong data-i18n="doc_sub3_title2">Como funciona a entrevista?</strong></p>
+          <p data-i18n="doc_sub3_desc5">As entrevistas são feitas por videoconferência ou presencialmente em um dos Núcleos Regionais da CG-Conare em São Paulo (SP), Campinas (SP) ou Rio de Janeiro (RJ), ou na sede em Brasília (DF). Algumas missões para outras regiões do país também ocorrem de tempos em tempos. A modalidade da entrevista depende do endereço da pessoa solicitante. </p>
+          <p data-i18n="doc_sub3_desc6">Os links abaixo ensinam a acessar a entrevista pelo computador e pelo celular/tablet: </p>
+          <p data-i18n="doc_sub3_desc7">- Computador: <a href="https://youtu.be/S0cl3nZgRW0">https://youtu.be/S0cl3nZgRW0;</a></p>
+          <p data-i18n="doc_sub3_desc8">- Computador (Espanhol): <a href="https://youtu.be/bCkVpEBP6JMv">https://youtu.be/bCkVpEBP6JMv;</a></p>
+          <p data-i18n="doc_sub3_desc9">- Celular/Tablet: <a href="https://youtu.be/clXBd1XC7O8">https://youtu.be/clXBd1XC7O8;</a></p>
+          <p data-i18n="doc_sub3_desc10">- Explicação e detalhes sobre a entrevista: <a href="https://youtu.be/IG8EtSnkFFE">https://youtu.be/IG8EtSnkFFE;</a></p>
+          <br>
+          <p><strong data-i18n="doc_sub3_title3">O que levar para a entrevista?</strong></p>
+          <p data-i18n="doc_sub3_desc11">- Passaporte;</p>
+          <p data-i18n="doc_sub3_desc12">- Protocolo de Refúgio;</p>
+          <p data-i18n="doc_sub3_desc13">- CPF;</p>
+          <p data-i18n="doc_sub3_desc14">- Carteira de trabalho;</p>
+          <p data-i18n="doc_sub3_desc15">- Carteira de identidade;</p>
+          <p data-i18n="doc_sub3_desc16">- Fotos;</p>
+          <p data-i18n="doc_sub3_desc17">- Matérias de jornais e revistas etc.</p>
+          <br>
+          <p><strong data-i18n="doc_sub3_title4">Não falo português. Como faço?</strong></p>
+          <p data-i18n="doc_sub3_desc18">A Coordenação-Geral do Conare providencia intérpretes nos idiomas inglês, espanhol, francês, árabe e chinês. Porém é necessário avisar com antecedência que você precisa de um intérprete em um desses idiomas, enviando um e-mail para entrevista.conare@mj.gov.br ou mensagem pelo WhatsApp +55 (61) 99972-7298.</p> 
+          <p data-i18n="doc_sub3_desc19">Se a pessoa solicitante falar apenas uma outra língua, será preciso levar um intérprete, que deverá assinar um Termo de Responsabilidade do Intérprete e enviar à Coordenação-Geral do Conare. Clique nos links abaixo para baixar o termo no idioma de preferência: </p>
+          <p>- <a target="_blank" href="https://www.gov.br/mj/pt-br/assuntos/seus-direitos/refugio/o-que-e-refugio/anexos/termoderesponsabilidadeinterpretev3-1.pdf">Termo de Responsabilidade do(a) Intérprete (Português)</a>;</p>
+          <p>- <a target="_blank" href="https://www.gov.br/mj/pt-br/assuntos/seus-direitos/refugio/o-que-e-refugio/anexos/termo-de-responsabilidade-interprete-english.pdf">Interpreter Statement of Responsability (English)</a>;</p>
+          <p>- <a target="_blank" href="https://www.gov.br/mj/pt-br/assuntos/seus-direitos/refugio/o-que-e-refugio/anexos/termo-de-responsabilidade-interprete-espanhol-v2.pdf">Declaración de Responsabilidad del(de la) Intérprete (Español)</a>;</p>
+          <p>- <a target="_blank" href="https://www.gov.br/mj/pt-br/assuntos/seus-direitos/refugio/o-que-e-refugio/anexos/termo-de-responsabilidade-interprete-v2_fr.pdf">Terme de Responsabilité de l'Intérprete (Francês)</a>;</p>
+          <p>- <a target="_blank" href="https://www.gov.br/mj/pt-br/assuntos/seus-direitos/refugio/o-que-e-refugio/anexos/termo-de-responsabilidade-arabe.pdf">بيان†واجبات†المترجم†ومسؤوليات†ه (Árabe)</a>.</p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  
+  <!-- Educação e Integração -->
+  <div class="edu">
+    <div class="accordion">
+      <button data-i18n="edu" class="btn_acc">Educação e Integração</button><img class="down" src="./img/seta.png">
+    </div>
+    <div class="content">
+      <div class="box">
+        <button data-i18n="edu_sub1" class="subaccordion">Direitos Educacionais para Refugiados<span class="down"></span></button>
+        <div class="container">
+          <p data-i18n="edu_sub1_desc1">Devido a Lei 9.474/1997 - Estatuto dos Refugiados, os solicitantes de refúgio e os refugiados têm o direito à educação no Brasil. O sistema educacional brasileiro é composto por diferentes níveis, como: </p>
+          <p data-i18n="edu_sub1_desc2">- Educação Infantil (0-6 anos), que inclui creches e pré-escolas;</p>
+          <p data-i18n="edu_sub1_desc3">- Ensino Fundamental (7-14 anos), dividido do 1º ao 9º ano, inclui escolas estaduais e municipais; </p>
+          <p data-i18n="edu_sub1_desc4">- Ensino Médio (15-17 anos), dividido do 1º ao 3º ano, também inclui escolas estaduais e municipais. </p>
+          <p data-i18n="edu_sub1_desc5">Caso não tenha toda a documentação necessária, a legislação brasileira sobre refúgio declara que processos administrativos, como a matrícula em escolas, devem ser facilitados para pessoas refugiadas. </p>
+          <p data-i18n="edu_sub1_desc6">Além do mais, refugiados e solicitantes de refúgio que possuem diplomas universitários têm a possibilidade de revalidar seus certificados com a ajuda do ACNUR e seus parceiros.</p>
+          <br>
+          <p><strong data-i18n="edu_sub1_desc7">Fonte: </strong><a data-i18n="edu_sub1_link" href="https://help.unhcr.org/brazil/educacao/#:~:text=Em%20S%C3%A3o%20Paulo%2C%20a%20organiza%C3%A7%C3%A3o,Clique%20aqui%20e%20saiba%20mais" target=_blank>Educação - Agência da ONU para Refugiados (ACNUR)</a></p>
+          <br>
+        </div>
+      </div>        
+      <div class="box">
+        <button data-i18n="edu_sub2" class="subaccordion">Curso de Português<span class="down"></span></button>
+        <div class="container">
+          <p data-i18n="edu_sub2_desc1">A Fluency Academy, em parceria com o ACNUR (Alto Comissariado das Nações Unidas para os Refugiados), está oferecendo cursos de português online voltados para falantes de espanhol. Esses cursos são uma ótimos para quem deseja aprender ou aprimorar o português, principalmente para solicitantes de refúgio, refugiados e imigrantes.</p>
+          <p data-i18n="edu_sub2_desc2">Além dos cursos online, algumas instituições públicas e organizações da sociedade civil também oferecem cursos de português presenciais e gratuitos. Esses cursos são oferecidos em várias regiões do Brasil por organizações parceiras do ACNUR. Porém, devido à alta demanda, pode haver listas de espera para conseguir uma vaga. </p>
+          <p data-i18n="edu_sub2_desc3">Para conseguir achar um curso presencial, é indicado buscar as organizações parceiras do ACNUR na sua região.</p>
+          <br>
+          <p><strong data-i18n="edu_sub1_desc7">Fonte: </strong><a data-i18n="edu_sub2_link" href="https://help.unhcr.org/brazil/educacao/#:~:text=Em%20S%C3%A3o%20Paulo%2C%20a%20organiza%C3%A7%C3%A3o,Clique%20aqui%20e%20saiba%20mais" target=_blank>Educação - Agência da ONU para Refugiados (ACNUR)</a></p>
+          <br>
+        </div>
+      </div>
+      <div class="box">
+        <button class="subaccordion" data-i18n="edu_sub3">Informações para trabalhadores refugiados<span class="down"></span></button>
+        <div class="container">
+          <p data-i18n="edu_sub3_desc1">A campanha "Proteja o Trabalho" é uma iniciativa permanente promovida pela Secretaria de Inspeção do Trabalho (SIT) desde setembro de 2020, em colaboração com a Organização Internacional do Trabalho (OIT), a Organização Internacional para as Migrações (OIM) e o Alto Comissariado das Nações Unidas para os Refugiados (ACNUR). </p>
+          <p data-i18n="edu_sub3_desc2">Esse projeto tem como objetivo principal informar e conscientizar trabalhadores migrantes e refugiados, empregadores e outros membros da sociedade civil sobre os direitos trabalhistas estabelecidos pela legislação brasileira. A campanha aborda temas como carteira de trabalho, trabalho infantil, trabalho análogo à escravidão, aprendizagem profissional, trabalho temporário, entre outros.</p>
+          <p data-i18n="edu_sub3_desc3">Para facilitar o acesso à informação, são disponibilizados cartilhas e vídeos em diversos idiomas, entre eles o inglês, espanhol, francês e árabe. Esse material auxilia os trabalhadores a ter consciência dos seus direitos e deveres, promovendo um ambiente de trabalho justo e seguro.</p>
+          <br>
+          <p><strong data-i18n="edu_sub1_desc7">Fonte: </strong><a data-i18n="edu_sub3_link" href="https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/acoes-e-programas/programas-projetos-acoes-obras-e-atividades/proteja" target=_blank>Proteção dos Trabalhadores Migrantes e Refugiados</a></p>  
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Informações Legais e Direitos Humanos -->
+  <div class="info">
+    <div class="accordion">
+      <button data-i18n="info" class="btn_acc">Informações Legais e Direitos Humanos</button><img class="down" src="./img/seta.png">
+    </div>
+    <div class="content">
+      <div class="box">
+        <button class="subaccordion" data-i18n="info_sub1">Informações Legais<span class="down"></span></button>
+        <div class="container">
+          <p data-i18n="info_sub1_desc1">Para ter acesso aos direitos garantidos por lei, o refugiado deve solicitar e obter o reconhecimento da condição de refugiado junto ao Conselho Nacional de Imigração (CONI). Com o reconhecimento, o refugiado recebe o Registro Nacional de Estrangeiro (RNE), que serve como documento de identidade e permite o acesso a diversos serviços.</p>
+          <br>
+          <p><strong data-i18n="edu_sub1_desc7">Fonte: </strong><p data-i18n="info_sub1_fonte">LEI N° 13.445, DE 24 DE MAIO DE 2017. Dispõe sobre os direitos e os deveres do migrante e do visitante, regula a sua entrada e estada no País e estabelece princípios e diretrizes para as políticas públicas para o emigrante.</p></p>
+        </div>
+      </div>
+      <div class="box">
+        <button class="subaccordion" data-i18n="info_sub2">Documentos importantes<span class="down"></span></button>
+        <div class="container">
+          <p><strong>RNE:</strong><p data-i18n="info_sub2_desc1">Registro Nacional de Estrangeiro.</p></p>
+          <p><strong>CPF:</strong><p data-i18n="info_sub2_desc2">Cadastro de Pessoa Física.</p></p>
+          <p><strong>CTPS:</strong><p data-i18n="info_sub2_desc3">Carteira de Trabalho e Previdência Social.</p></p>
+        </div>
+      </div>
+      <div class="box">
+        <button class="subaccordion" data-i18n="info_sub3">Órgãos importantes<span class="down"></span></button>
+        <div class="container">
+          <p><strong data-i18n="info_sub3_desc1">ACNUR:</strong><p data-i18n="info_sub3_desc2">Alto Comissariado das Nações Unidas para Refugiados.</p></p>
+          <p><strong>CONI:</strong><p data-i18n="info_sub3_desc4">Conselho Nacional de Imigração.</p></p>
+          <p><strong data-i18n="info_sub3_desc5">Ministério da Justiça e Segurança Pública:</strong><p data-i18n="info_sub3_desc6"> Responsável pela gestão da política migratória no Brasil.</p></p>
+        </div>
+      </div>
+      <div class="box">
+        <button class="subaccordion" data-i18n="info_sub4">Direitos Humanos e Direitos dos Refugiados<span class="down"></span></button>
+        <div class="container">
+          <p data-i18n="info_sub4_desc1">- Acesso a serviços básicos de Saúde, educação, moradia e assistência social são direitos fundamentais para todos os refugiados;</p>
+          <p data-i18n="info_sub4_desc2">- Em muitos países, os refugiados têm liberdade de movimento dentro do território nacional;</p>
+          <p data-i18n="info_sub4_desc3">- Proteção contra deportação, um refugiado não pode ser deportado para um país onde sua vida ou liberdade esteja ameaçada;</p>
+          <p data-i18n="info_sub4_desc4">- Muitos países permitem que os refugiados trabalhem legalmente;</p>
+          <p data-i18n="info_sub4_desc5">- A reunificação familiar é um direito importante para os refugiados;</p>
+          <p data-i18n="info_sub4_desc6">- Proteção contra a tortura e tratamentos cruéis, desumanos ou degradantes.</p>
+        </div>
+      </div>
+      <div class="box">
+        <button class="subaccordion" data-i18n="info_sub5">Como denunciar violações?<span class="down"></span></button>
+        <div class="container">
+          <p><strong data-i18n="info_sub5_desc1">Agências das Nações Unidas:</strong><p data-i18n="info_sub5_desc2">O ACNUR (Alto Comissariado das Nações Unidas para Refugiados) é a principal agência das Nações Unidas responsável pela proteção internacional dos refugiados.</p></p>
+          <p><strong data-i18n="info_sub5_desc3">Organizações não governamentais:</strong><p data-i18n="info_sub5_desc4">Existem diversas ONGs que trabalham na defesa dos direitos dos refugiados e podem oferecer apoio e orientação.</p></p>
+          <p><strong data-i18n="info_sub5_desc5">Autoridades locais:</strong><p data-i18n="info_sub5_desc6">Polícia, Ministério Público e Defensoria Pública são alguns dos órgãos que podem receber denúncias.</p></p>
+          <br>
+          <p><strong data-i18n="info_sub5_desc7">Canais de denúncia:</strong></p>
+          <p data-i18n="info_sub5_desc8">- Disque 100: Disque Direitos Humanos.</p>
+          <p data-i18n="info_sub5_desc9">- Ouvidoria do Ministério da Justiça e Segurança Pública.</p>
+          <p data-i18n="info_sub5_desc10">- Ouvidorias das instituições envolvidas no seu processo ou otras que possam ajudar.</p>
+          <br>
+          <p><strong data-i18n="edu_sub1_desc7">Fonte: </strong><a data-i18n="info_sub5_desc11" href="https://www.gov.br/mdh/pt-br/navegue-por-temas/migrantes-refugiados-e-apatridas" target=_blank>Migrantes, Refugiados e Apátridas</a></p>  
+        </div>
+      </div>
+      <div class="box">
+        <button class="subaccordion" data-i18n="info_sub6">É importante!<span class="down"></span></button>
+        <div class="container">
+          <p><strong data-i18n="info_sub6_desc1">Documentar:</strong><p data-i18n="info_sub6_desc2">Guarde provas das violações sofridas, como fotos, vídeos, testemunhas, etc.</p></p>
+          <p><strong data-i18n="info_sub6_desc3">Buscar apoio:</strong><p data-i18n="info_sub6_desc4">Converse com outras pessoas que passaram por situações semelhantes, participe de grupos de apoio.</p> </p>
+          <p><strong data-i18n="info_sub6_desc5">Busque seu direitos:</strong><p data-i18n="info_sub6_desc6">Denunciar é fundamental para garantir seus direitos e prevenir que outras pessoas sofram as mesmas violações.</p></p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+
+<br>
+<br>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-col">
+    <a href="./index.html"><img class="logo" src="./img/safeJourney_logo.png" alt="Logo Safe Journey" style="width: auto; height: 28%; margin-top: 5px; margin-bottom: 5px;" /></a> 
+    <div class="nav">
+      <h1 data-i18n="nav" class="title">Navegação</h1>
+      <a data-i18n="home" href="./index.html">Início</a>
+      <a data-i18n="map" href="./mapa1.html">Mapa</a>
+      <a data-i18n="title1" href="./instrucoes.html">Instruções</a>
+      <a data-i18n="title2" href="./perguntas.html">Perguntas Frequentes</a>
+      <a data-i18n="ajuda" href="./ajuda.html">Ajuda</a>
+    </div>
+    <div class="download">
+      <h1 class="title">Download</h1>
+      <a href="#">Mobile App</a>
+    </div>
+    <div class="recursos">
+      <h1 data-i18n="recursos" class="title">Recursos</h1>
+      <a data-i18n="docm" href="#">Documentação</a>
+    </div>
+    <div class="fale_conosco">
+      <h1 data-i18n="us" class="title">Fale Conosco</h1>
+      <p>safejourney@gmail.com</p>
+      <p>+55 (19) 9999-999</p>
+    </div>
+    <div class="redes_sociais">
+      <h1 data-i18n="redes" class="title">Redes Sociais</h1>
+      <div class="redes_sociais_icons">
+        <br />
+        <a href="https://x.com"
+          ><i class="fa fa-twitter" style="font-size: 23px"></i
+        ></a>
+        <a href="https://www.facebook.com"
+          ><i class="fa fa-facebook" style="font-size: 23px"></i
+        ></a>
+        <a href="https://www.instagram.com"
+          ><i class="fa fa-instagram" style="font-size: 23px"></i
+        ></a>
+        <a href="https://br.linkedin.com"
+          ><i class="fa fa-linkedin" style="font-size: 23px"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/instrucoes.js"></script>
+</body>
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/03/19/20241003194822-4APW5AQH.js"></script>
+
+<script src="./js/translation.js"></script>
+<script src="./js/lang.js"></script>
+</html>

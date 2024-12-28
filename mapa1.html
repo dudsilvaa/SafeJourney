@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Journey - Mapa</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/mapa1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- IMPORTANDO FONTE -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    </style>
+
+    <!-- IMPORTANDO API MAPA -->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+</head>
+<body>
+  
+<!-- MENU DE NAVEGAÇÃO -->
+<header>
+  <a href="./index.html"><img class="logo" src="./img/logo2.png" alt="Logo Safe Journey" style="width: 30%; height: 80%; margin-top: 5px; margin-bottom: 5px; margin-right: -10px;" /></a> 
+  <div class="navbar">
+    <a data-i18n="map" href="./mapa1.html">Mapa</a>
+    <div class="dropdown">
+      <button data-i18n="suporte" class="dropbtn">Suporte</button><img class="down" src="./img/seta3.png">
+      <div class="dropdown-content">
+        <a data-i18n="title1" href="./instrucoes.html">Instruções</a>
+        <a data-i18n="title2" href="./perguntas.html">Perguntas Frequentes</a>
+        <a data-i18n="ajuda" href="./ajuda.html">Ajuda</a>
+      </div>
+    </div>
+    <a data-i18n="moradia" href="./moradia.html">Moradia</a>
+  </div>
+  <div class="lang">
+    <button class="lang"><img src="./img/language.png" style="width: 100%"/></button>
+    <div class="dropdown-content">
+      <a href="#" onclick="mudarIdioma('en')">English</a>
+      <a href="#" onclick="mudarIdioma('pt')">Portuguese</a>
+    </div>
+  </div>
+  <div class="user_pfp">
+    <button class="user_pfp"><img src="./img/user.png"></button>
+    <div class="dropdown-content">
+      <a data-i18n="perfil" href="./perfil.html">Ver perfil</a>
+      <a data-i18n="logout" href="#" onclick="logout()">Sair</a>
+    </div>
+  </div>
+  </div>
+  </div>
+</header>
+
+<!-- BARRA DE PESQUISA -->
+<form action="" id="form">
+  <input placeholder="Pesquisar" type="text" id="endereco">
+  <button type="submit" data-i18n="btn_enviar">Enviar</button>
+</form>
+
+<!-- MAPA -->
+<div id="mapContainer" style="width: 100%; height: 100%;"></div>
+
+<script src="./js/mapa1.js"></script>
+<script>
+  const form = document.getElementById('form');
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const input = document.getElementById("endereco").value + ", Brazil";
+    geocodingParams = { 
+      searchText: input 
+    };
+    geocoder.geocode(geocodingParams, onResult);
+
+  })
+</script>
+
+<div id="results"></div>
+
+
+<!-- LOCAIS -->
+<style>
+      #results {
+      margin-top: 20px;
+    }
+</style>
+</body>
+
+<script src="./js/mapa1.js"></script>
+<script src="./js/translation.js"></script>
+<script src="./js/lang.js"></script>
+
+</html>

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Lexend", sans-serif;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+}
+
+.loader {
+    margin-top: 330%;
+    width: 70px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+      radial-gradient(farthest-side,#faaf1d 94%,#0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%,#faaf1d);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation: l13 1s infinite linear;
+  }
+  @keyframes l13{ 
+    100%{transform: rotate(1turn)}
+  }
+

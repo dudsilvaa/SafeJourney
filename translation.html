@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Site</title>
+    <style>
+        .language-selector {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('pt')">Portuguese</button>
+    </div>
+    <h1 data-i18n="welcome"></h1>
+    <button data-i18n="login"></button>
+    <button data-i18n="signup"></button>
+    <button data-i18n="help"></button>
+
+    <script>
+        const translations = {
+            en: {
+                "welcome": "Welcome",
+                "login": "Login",
+                "signup": "Sign Up",
+                "help": "Help"
+            },
+            pt: {
+                "welcome": "Bem-vindo(a)",
+                "login": "Login",
+                "signup": "Cadastrar-se",
+                "help": "Ajuda"
+            }
+        };
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.textContent = translations[lang][el.getAttribute('data-i18n')];
+            });
+            localStorage.setItem('language', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const language = localStorage.getItem('language') || 'en';
+            setLanguage(language);
+        });
+    </script>
+</body>
+</html>

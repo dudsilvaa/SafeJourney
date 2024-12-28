@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Journey - Perguntas Frequentes</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/perguntas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- IMPORTANDO FONTE -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    </style>
+</head>
+<body>
+
+<!-- MENU DE NAVEGAÇÃO -->
+<header>
+  <a href="./index.html"><img class="logo" src="./img/logo2.png" alt="Logo Safe Journey" style="width: 60%; height: 80%; margin-top: 5px; margin-bottom: 5px; margin-right: -10px;" /></a> 
+  <div class="navbar">
+    <a data-i18n="map" href="./mapa1.html">Mapa</a>
+    <div class="dropdown">
+      <button data-i18n="suporte" class="dropbtn">Suporte</button><img class="seta" src="./img/seta3.png">
+      <div class="dropdown-content">
+        <a data-i18n="title1" href="./instrucoes.html">Instruções</a>
+        <a data-i18n="title2" href="./perguntas.html">Perguntas Frequentes</a>
+        <a data-i18n="ajuda" href="./ajuda.html">Ajuda</a>
+      </div>
+    </div>
+    <a data-i18n="moradia" href="./moradia.html">Moradia</a>
+  </div>
+  <div class="lang">
+    <button class="lang"><img src="./img/language.png" style="width: 100%"/></button>
+    <div class="dropdown-content">
+      <a href="#" onclick="mudarIdioma('en')">English</a>
+      <a href="#" onclick="mudarIdioma('pt')">Portuguese</a>
+    </div>
+  </div>
+  <div class="user_pfp">
+    <button class="user_pfp"><img src="./img/user.png"></button>
+    <div class="dropdown-content">
+      <a data-i18n="perfil" href="./perfil.html">Ver perfil</a>
+      <a data-i18n="logout" href="#" onclick="logout()">Sair</a>
+    </div>
+  </div>
+  </div>
+  </div>
+</header>
+
+  <br>
+  <br>
+  <h1 class="t_perguntas" data-i18n="title2"></h1>
+  <br>
+  <br>
+
+  <!-- PERGUNTAS FREQUENTES -->
+  <div class="perguntas">
+    <div class="doc">
+      <button class="accordion" data-i18n="perg1">Como obter o visto de refugiados e quais os documentos necessários?<span class="down"></span></button>
+      <div class="content">
+        <div class="box">
+          <p><a data-i18n="resp1" onclick="instrucoes()" href="./instrucoes.html?accordion=1">Siga as instruções!</a></p> 
+          <br>
+        </div>
+      </div>
+      
+      <br>
+      <br>
+      <br>
+
+      <button class="accordion" data-i18n="perg2">Como regularizar a situação para trabalhar, e quais as possibilidades de serviços? <span class="down"></span></button>
+      <div class="content">
+        <div class="box">
+            <div class="txt">
+            <p style="display: inline; margin-left: 0;" data-i18n="resp2">O primeiro passo é registrar a solicitação de refúgio no </p>
+            <strong style="display: inline; margin-left: 0;" data-i18n="acnur">ACNUR</strong>
+            <p style="display: inline; margin-left: 0;" data-i18n="resp21"> ou na </p>
+            <strong style="display: inline; margin-left: 0;" data-i18n="police">Polícia Federal</strong><p style="display: inline; margin-left: 0;" data-i18n="resp22">. É importante fazer isso assim que chegar ao Brasil.</p>
+
+            <p style="margin-left: 0;" data-i18n="resp23">Após solicitar o refúgio, o refugiado receberá um protocolo que serve como comprovante de solicitação. Esse documento permite que a pessoa permaneça no país legalmente enquanto aguarda a decisão.</p> 
+            <p style="margin-left: 0;" data-i18n="resp24">Com o protocolo em mãos, o refugiado pode solicitar a Carteira de Trabalho e Previdência Social (CTPS), que é necessária para formalizar empregos. O processo pode ser feito em um posto do Ministério do Trabalho.</p> 
+            <p style="margin-left: 0;" data-i18n="resp25">O refugiado deve obter um Cadastro de Pessoa Física (CPF), que é essencial para a realização de várias atividades, como abrir contas bancárias e trabalhar formalmente. Isso pode ser feito na Receita Federal.</p>   
+            <p style="margin-left: 0;" data-i18n="resp26">É importante acompanhar o processo de solicitação de refúgio e, após a concessão do status de refugiado, solicitar a emissão do Registro Nacional de Estrangeiro (RNE), que formaliza a situação legal. </p>
+            <p style="margin-left: 0;" data-i18n="resp27">Com toda a documentação em ordem, o refugiado pode buscar oportunidades de emprego, utilizando redes de contatos, sites de vagas e organizações que oferecem suporte à inserção no mercado de trabalho.</p> 
+            <p style="margin-left: 0;" data-i18n="resp28">Muitas ONGs oferecem serviços de orientação e ajuda na busca de emprego, além de cursos de capacitação profissional. </p>
+            <br>
+        </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <button class="accordion" data-i18n="perg3">Quais são os direitos e deveres do refugiado no Brasil?<span class="down"></span></button>
+      <div class="content">
+        <div class="box">
+          <p data-i18n="resp3">Os refugiados no Brasil têm direitos e deveres garantidos pela legislação nacional, especialmente pela Lei de Refúgio (Lei nº 9.474/1997) e pela Constituição Federal.</p> 
+          <p data-i18n="resp30">Os direitos são:</p>
+          <p><strong data-i18n="resp31_bold">- Direito à Proteção Internacional: </strong><p data-i18n="resp31">Os refugiados têm o direito de não serem deportados para seu país de origem, onde correm risco de perseguição;</p></p>
+          <p><strong data-i18n="resp32_bold">- Acesso à Documentação: </strong><p data-i18n="resp32">Eles têm direito a documentos de identidade e a um registro como refugiado, o que facilita o acesso a serviços e direitos;</p></p>
+          <p><strong data-i18n="resp33_bold">- Direito à Assistência Social: </strong><p data-i18n="resp33">Têm acesso a programas de assistência social, saúde, educação e trabalho;</p></p>
+          <p><strong data-i18n="resp34_bold">- Direito ao Trabalho: </strong><p data-i18n="resp34">Os refugiados podem trabalhar legalmente no Brasil e têm os mesmos direitos trabalhistas que os cidadãos brasileiros;</p></p>
+          <p><strong data-i18n="resp35_bold">- Acesso à Justiça: </strong><p data-="resp35">Podem recorrer ao sistema judiciário brasileiro e contar com assistência jurídica.</p></p>
+          <p data-i18n="resp36">Os deveres são:</p>
+          <p><strong data-i18n="resp37_bold">- Cumprir as Leis: </strong><p data-i18n="resp37">Os refugiados devem respeitar as leis brasileiras, assim como qualquer cidadão.</p>
+          <p><strong data-i18n="resp38_bold">- Atualizar Documentação: </strong><p data-i18n="resp38">É importante manter seus documentos atualizados e informados às autoridades competentes sobre qualquer mudança de endereço ou situação.</p> 
+          <p><strong data-i18n="resp39_bold">- Colaborar com Autoridades: </strong><p data-i18n="resp39">Caso precisar, devem ajudar as autoridades em processos de regularização e em investigações.</p>
+          <p><strong data-i18n="resp40_bold">- Integrar-se à Comunidade: </strong><p data-i18n="resp40">É incentivado que busquem integrar-se à sociedade, participando de atividades comunitárias, eventos culturais etc. </p>
+          <br>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <button class="accordion" data-i18n="perg4">Como funciona o mercado imobiliário brasileiro e onde achar moradia?<span class="down"></span></button>
+      <div class="content">
+        <div class="box">
+          <p data-i18n="resp4">O mercado imobiliário brasileiro é dinâmico e influenciado por diversos fatores econômicos, sociais e políticos. </p>
+          <div class="txt">
+          <p><strong style="display: inline; margin-left: 0;" data-i18n="resp41_bold">- Residencial: </strong><p data-i18n="resp41">São casas, apartamentos e condomínios.</p>
+          <p><strong style="display: inline; margin-left: 0;" data-i18n="resp42_bold">- Comercial: </strong><p data-i18n="resp42">Possui escritórios, lojas e galpões.</p>           
+          <p><strong style="display: inline; margin-left: 0;" data-i18n="resp43_bold">- Terrenos: </strong><p data-i18n="resp43">Lotes para construção.</p>
+          <p><strong style="display: inline; margin-left: 0;" data-i18n="resp44_bold">- Industrial: </strong><p data-i18n="resp44">Imóveis para fábricas e armazéns.</p>
+          </div>
+          <p data-i18n="resp45">No Brasil existe a opção de financiamento, que consiste em obter crédito através de instituições financeiras, onde o objetivo principal é ajudar pessoas e empresas a adquirirem bens ou serviços que não poderiam pagar à vista. Os financiamentos são geralmente feitos por meio de bancos, com opções como o Sistema Financeiro de Habitação (SFH) e o Programa Minha Casa Minha Vida. A taxa de juros, a renda do comprador e o valor de entrada são fatores determinantes.</p> 
+          <p data-i18n="resp46">O preço dos imóveis é influenciado pela localização, infraestrutura, demanda e oferta. Em grandes cidades, áreas centrais e lugares seguros tendem a ter preços mais altos.</p>
+          <p data-i18n="resp47">Corretores de imóveis e imobiliárias desempenham um papel importante na intermediação de vendas e aluguéis, oferecendo serviços de avaliação e negociação. É possível encontrar moradia em sites de imóveis, imobiliárias, redes sociais, visitas em bairros, entre outros.</p> 
+          <br>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <button class="accordion" data-i18n="perg5">Onde aprender a língua portuguesa e quais recursos estão disponíveis para comunicação?<span class="down"></span></button>
+      <div class="content">
+        <div class="box">
+          <p><a data-i18n="resp5" onclick="instrucoes()" href="./instrucoes.html?accordion=1">Siga as instruções!</a></p> 
+          <br>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <button class="accordion" data-i18n="perg6">Onde encontrar ajuda psicológica? <span class="down"></span></button>
+      <div class="content">
+        <div class="box">
+          <p data-i18n="resp6">- Centros de Referência para a Assistência Social (CRAS);</p>
+          <p data-i18n="resp61">- Organizações Não Governamentais (ONGs); </p>
+          <p data-i18n="resp62">- Serviços públicos de saúde;</p>
+          <p data-i18n="resp63">- Telefones de apoio;</p>
+          <p data-i18n="resp64">- Rede de apoio da comunidade;</p>
+          <p><a data-i18n="resp65" href="./ajuda.html">- Outros centros de acolhimento.</a></p> 
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+  
+<!-- FOOTER -->
+<footer>
+  <div class="footer-col">
+    <a href="./index.html"><img class="logo" src="./img/safeJourney_logo.png" alt="Logo Safe Journey" style="width: auto; height: 28%; margin-top: 5px; margin-bottom: 5px;" /></a> 
+    <div class="nav">
+      <h1 data-i18n="nav" class="title">Navegação</h1>
+      <a data-i18n="home" href="./index.html">Início</a>
+      <a data-i18n="map" href="./mapa1.html">Mapa</a>
+      <a data-i18n="title1" href="./instrucoes.html">Instruções</a>
+      <a data-i18n="title2" href="./perguntas.html">Perguntas Frequentes</a>
+      <a data-i18n="ajuda" href="./ajuda.html">Ajuda</a>
+    </div>
+    <div class="download">
+      <h1 class="title">Download</h1>
+      <a href="#">Mobile App</a>
+    </div>
+    <div class="recursos">
+      <h1 data-i18n="recursos" class="title">Recursos</h1>
+      <a data-i18n="docm" href="#">Documentação</a>
+    </div>
+    <div class="fale_conosco">
+      <h1 data-i18n="us" class="title">Fale Conosco</h1>
+      <p>safejourney@gmail.com</p>
+      <p>+55 (19) 9999-999</p>
+    </div>
+    <div class="redes_sociais">
+      <h1 data-i18n="redes" class="title">Redes Sociais</h1>
+      <div class="redes_sociais_icons">
+        <br />
+        <a href="https://x.com"
+          ><i class="fa fa-twitter" style="font-size: 23px"></i
+        ></a>
+        <a href="https://www.facebook.com"
+          ><i class="fa fa-facebook" style="font-size: 23px"></i
+        ></a>
+        <a href="https://www.instagram.com"
+          ><i class="fa fa-instagram" style="font-size: 23px"></i
+        ></a>
+        <a href="https://br.linkedin.com"
+          ><i class="fa fa-linkedin" style="font-size: 23px"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/perguntas.js"></script>
+</body>
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/03/19/20241003194822-4APW5AQH.js"></script>
+
+<script src="./js/translation.js"></script>
+<script src="./js/lang.js"></script>
+</html>
